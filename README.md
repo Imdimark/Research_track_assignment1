@@ -1,4 +1,4 @@
-# assignment1
+# Assignment1
 
 # Graphic rapresentation of the components:
 
