@@ -1,0 +1,161 @@
+\hypertarget{bot_8cpp}{}\doxysection{src/bot.cpp File Reference}
+\label{bot_8cpp}\index{src/bot.cpp@{src/bot.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Odometry.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Twist.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}assignment1/\+Rando.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bot_8cpp_a4d1c1379a370f406da23c769d8d07590}{robot\+\_\+\+Callback}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&msgs)
+\item 
+int \mbox{\hyperlink{bot_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{bot_8cpp_a9e62c5e5f970bf90b9993cb6ffefa6d6}{Targetx}} =0
+\item 
+float \mbox{\hyperlink{bot_8cpp_ad44ca87af1df84e54700c7f90a395286}{Targety}} = 0
+\item 
+float \mbox{\hyperlink{bot_8cpp_a925574b90e13f777e3ee3024473fc7fd}{Position}}
+\item 
+float \mbox{\hyperlink{bot_8cpp_a06f14a9abd47b91465f895d5259cdc1b}{distance}} =0
+\item 
+float \mbox{\hyperlink{bot_8cpp_a9fc4cca635a26c692681a7071e379aa7}{k}} = 5
+\item 
+float \mbox{\hyperlink{bot_8cpp_ad0da36b2558901e21e7a30f6c227a45e}{x}} =0
+\item 
+float \mbox{\hyperlink{bot_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}{y}} =0
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{bot_8cpp_ac050ecd28d14458e8d356e5f6d38a25b}{chatter\+\_\+pub}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{bot_8cpp_a1611cf07a00a9e4683f202c37840e40d}{clie}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bot_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{bot_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{bot.cpp@{bot.cpp}!main@{main}}
+\index{main@{main}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file bot.\+cpp.
+
+\mbox{\Hypertarget{bot_8cpp_a4d1c1379a370f406da23c769d8d07590}\label{bot_8cpp_a4d1c1379a370f406da23c769d8d07590}} 
+\index{bot.cpp@{bot.cpp}!robot\_Callback@{robot\_Callback}}
+\index{robot\_Callback@{robot\_Callback}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{robot\_Callback()}{robot\_Callback()}}
+{\footnotesize\ttfamily void robot\+\_\+\+Callback (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msgs }\end{DoxyParamCaption})}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em This} & function returns a void\\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file bot.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{bot_8cpp_ac050ecd28d14458e8d356e5f6d38a25b}\label{bot_8cpp_ac050ecd28d14458e8d356e5f6d38a25b}} 
+\index{bot.cpp@{bot.cpp}!chatter\_pub@{chatter\_pub}}
+\index{chatter\_pub@{chatter\_pub}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{chatter\_pub}{chatter\_pub}}
+{\footnotesize\ttfamily ros\+::\+Publisher chatter\+\_\+pub}
+
+
+
+Definition at line 19 of file bot.\+cpp.
+
+\mbox{\Hypertarget{bot_8cpp_a1611cf07a00a9e4683f202c37840e40d}\label{bot_8cpp_a1611cf07a00a9e4683f202c37840e40d}} 
+\index{bot.cpp@{bot.cpp}!clie@{clie}}
+\index{clie@{clie}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{clie}{clie}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client clie}
+
+
+
+Definition at line 20 of file bot.\+cpp.
+
+\mbox{\Hypertarget{bot_8cpp_a06f14a9abd47b91465f895d5259cdc1b}\label{bot_8cpp_a06f14a9abd47b91465f895d5259cdc1b}} 
+\index{bot.cpp@{bot.cpp}!distance@{distance}}
+\index{distance@{distance}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily float distance =0}
+
+
+
+Definition at line 14 of file bot.\+cpp.
+
+\mbox{\Hypertarget{bot_8cpp_a9fc4cca635a26c692681a7071e379aa7}\label{bot_8cpp_a9fc4cca635a26c692681a7071e379aa7}} 
+\index{bot.cpp@{bot.cpp}!k@{k}}
+\index{k@{k}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily float k = 5}
+
+
+
+Definition at line 15 of file bot.\+cpp.
+
+\mbox{\Hypertarget{bot_8cpp_a925574b90e13f777e3ee3024473fc7fd}\label{bot_8cpp_a925574b90e13f777e3ee3024473fc7fd}} 
+\index{bot.cpp@{bot.cpp}!Position@{Position}}
+\index{Position@{Position}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily float Position}
+
+
+
+Definition at line 13 of file bot.\+cpp.
+
+\mbox{\Hypertarget{bot_8cpp_a9e62c5e5f970bf90b9993cb6ffefa6d6}\label{bot_8cpp_a9e62c5e5f970bf90b9993cb6ffefa6d6}} 
+\index{bot.cpp@{bot.cpp}!Targetx@{Targetx}}
+\index{Targetx@{Targetx}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{Targetx}{Targetx}}
+{\footnotesize\ttfamily float Targetx =0}
+
+
+
+Definition at line 11 of file bot.\+cpp.
+
+\mbox{\Hypertarget{bot_8cpp_ad44ca87af1df84e54700c7f90a395286}\label{bot_8cpp_ad44ca87af1df84e54700c7f90a395286}} 
+\index{bot.cpp@{bot.cpp}!Targety@{Targety}}
+\index{Targety@{Targety}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{Targety}{Targety}}
+{\footnotesize\ttfamily float Targety = 0}
+
+
+
+Definition at line 12 of file bot.\+cpp.
+
+\mbox{\Hypertarget{bot_8cpp_ad0da36b2558901e21e7a30f6c227a45e}\label{bot_8cpp_ad0da36b2558901e21e7a30f6c227a45e}} 
+\index{bot.cpp@{bot.cpp}!x@{x}}
+\index{x@{x}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float x =0}
+
+
+
+Definition at line 16 of file bot.\+cpp.
+
+\mbox{\Hypertarget{bot_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}\label{bot_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}} 
+\index{bot.cpp@{bot.cpp}!y@{y}}
+\index{y@{y}!bot.cpp@{bot.cpp}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float y =0}
+
+
+
+Definition at line 17 of file bot.\+cpp.
+
